@@ -54,7 +54,7 @@ struct Linear {
         turf::Mutex mutex;                   // to DCLI the TableMigration (stored in the jobCoordinator)
         SimpleJobCoordinator jobCoordinator; // makes all blocked threads participate in the migration
 
-        Table(ureg sizeMask) : sizeMask(sizeMask), cellsRemaining(sreg(sizeMask * 0.75f)) {
+        Table(ureg sizeMask) : sizeMask(sizeMask), cellsRemaining(sreg(sizeMask * 1.00f)) {
         }
 
         static Table* create(ureg tableSize) {
